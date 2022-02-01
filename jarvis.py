@@ -103,4 +103,18 @@ if __name__ == '__main__':
 				print(e)
 				speak("Sorry my friend siddarth. I am not able to send this email")
 
+		elif 'search' in query:
+			speak("What should I search for?")
+			search = takeCommand()
+			url = "https://google.com/search?q=" + search
+			webbrowser.get().open(url)
+			speak("Here is what I found for you")
+
+		elif 'find location' in query:
+			speak("Which location should I search for?")
+			location = takeCommand()
+			url = "https://google.nl/maps/place/" + location + "/&amp;"
+			webbrowser.get().open(url)
+			speak("Here is what I found for you")
+
 
